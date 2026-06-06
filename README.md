@@ -215,27 +215,18 @@ classDiagram
 # Arquitectura Interna
 
 ```mermaid
-classDiagram
+flowchart LR
 
-    class ProductCreate
-    class ProductUpdate
-    class ProductResponse
+    Client[Cliente]
 
-    class ProductService {
-        +list_products()
-        +get_product()
-        +create_product()
-        +update_product()
-        +delete_product()
-    }
+    ProductRoutes["Product Routes"]
+    ProductService["Product Service"]
 
-    class ProductRoutes {
-        +GET /products
-        +GET /products/{id}
-        +POST /products
-        +PUT /products/{id}
-        +DELETE /products/{id}
-    }
+    ProductCreate["ProductCreate"]
+    ProductUpdate["ProductUpdate"]
+    ProductResponse["ProductResponse"]
+
+    Client --> ProductRoutes
 
     ProductRoutes --> ProductService
 
