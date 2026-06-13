@@ -1,5 +1,4 @@
-
-from app.models.healt_check_models import HealthCheck
+from app.models.health_check_models import HealthCheck
 
 
 class HealthServices():
@@ -8,4 +7,3 @@ class HealthServices():
             status="ok",
             service_name="CTT Course"
         )
-
